@@ -1,0 +1,76 @@
+
+
+// OPERADOR ||
+console.log(false || {}); 
+Retorna: {}
+El operador OR retorna el valor de la segunda, ya que la primera es falsa.
+
+console.log("string" || true); 
+Retorna: String
+En este caso retorna el valor de la primera, debido a que es verdadero y no pasa a la segunda.
+
+console.log([] || 100); 
+Retorna: []
+Igual que el caso anterior, el primer valor es verdadero y por eso lo devuelve y no va al segundo.
+
+console.log(null || "Prueba"); 
+Retorna: Prueba
+En este caso, null lo interpreta como False y pasa al segundo y por eso se pinta 'Prueba'
+
+console.log("" || true);
+Retorna: True
+Parecido al anterior, las comillas se entienden como Falso y por eso pasa al segundo y se pinta True.
+
+console.log(undefined || false); 
+Retorna: False
+El undifined ya es flase, por lo que al pasar a la segunda y ser false, nos pinta el false.
+
+// Operador &&
+console.log(false && {}); 
+Retorna: False
+La primera expresión es false, por lo que devuelve directamente el Falso.
+
+console.log("string" && true); 
+Retorna: true
+Como la primera expresión es verdadera, pasa a la segunda y al ser True, nos pinta esta ultima.
+
+console.log([] && 100); 
+Retorna: 100
+Igual que el caso anterior, la primera expresión es verdadera y pasamos a la segunda y pintamos esta ultima.
+
+console.log(null && "Prueba"); 
+Retorna:  Null
+En este caso null se interpreta como false, por lo que no es necesario ver la segunda expresión.
+
+console.log("" && true);
+Retorna: vacio
+Las comillas las interpreta como False, por lo que no miramos la siguiente expresión y lo que pinta es el valor de la primera y no false.
+
+console.log(undefined && false);
+Retorna: Undefined
+Como el ejemplo anterior, el Undefined es falso, no miramos la segunda expresión y lo que nos pinta es el valor de la primera.
+
+// Operador ??
+console.log(false ?? {});
+Retorna: False
+En este caso el operador ?? no interpreta false como falso, por lo que lo pinta directamente sin ver la segunda expresión.
+
+console.log("string" ?? true);
+Retorna: string
+El mismo caso que el anterior, nos devuelve la primera expresión al no ser falso
+
+console.log([] ?? 100);
+Retorna: []
+El mismo caso que el anterior, nos devuelve la primera expresión al no ser falso
+
+console.log(null ?? "Prueba");
+Retorna: Prueba
+Aquí nos devulve la segunda expresión, ya que la primera la considera como falso. Al ser así pasamos a la segunda y nos quedamos con ella.
+
+console.log("" ?? true);
+Retorna: vacio
+Nos retorna el valor vacio, ya que es primera expresión para este operador no es falso.
+
+console.log(undefined ?? false);
+Retorna: false
+Para este caso, undefined es considerado como falso por el operador, por lo que miramos la segunda expresión que si es verdadera y nos quedamos con ella.
